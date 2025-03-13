@@ -1,0 +1,157 @@
+/* Define CSS Variables */
+:root {
+    --sunset-gold: #f8b400;
+    --soft-cream: #faf5e4;
+    --deep-teal: #2c786c;
+    --midnight-green: #004445;
+    --text-color: #212121;
+    
+    --body-font: 'Raleway', sans-serif;
+    --title-font: 'Abril Fatface', serif;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--soft-cream);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--title-font);
+    color: var(--midnight-green);
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--deep-teal);
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Layout */
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Colours Section */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.color-box {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.first-color { background: var(--sunset-gold); }
+.second-color { background: var(--soft-cream); color: var(--text-color); }
+.third-color { background: var(--deep-teal); }
+.fourth-color { background: var(--midnight-green); }
+
+/* Typography Section */
+.font-sample {
+    margin-bottom: 20px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.body-font {
+    font-family: var(--body-font);
+}
+
+.title-font {
+    font-family: var(--title-font);
+}
+
+/* UI Elements Section */
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background: var(--sunset-gold);
+    color: white;
+}
+
+.secondary-btn {
+    background: var(--deep-teal);
+    color: white;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--midnight-green);
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
