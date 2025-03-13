@@ -1,8 +1,10 @@
 /* Define CSS Variables */
 :root {
     --sunset-gold: #f8b400;
+    --sunset-gold-darker: #dfa200;
     --soft-cream: #faf5e4;
     --deep-teal: #2c786c;
+    --deep-teal-darker: #286c61;
     --midnight-green: #004445;
     --text-color: #212121;
     
@@ -131,9 +133,42 @@ button {
     color: white;
 }
 
+.primary-btn:hover {
+    background: var(--sunset-gold-darker);
+}
+
 .secondary-btn {
     background: var(--deep-teal);
     color: white;
+}
+
+.secondary-btn:hover {
+    background: var(--deep-teal-darker);
+}
+
+.outlined-btn {
+    background: transparent;
+    border: 2px solid var(--deep-teal);
+    color: var(--deep-teal);
+}
+
+.outlined-btn:hover {
+    background: var(--deep-teal);
+    color: white;
+}
+
+button:not(:disabled):not(.disabled-btn):active { /* Active effect won't be applied to disabled buttons or .disabled-btn */
+    transform: scale(0.98); /* Press effect */
+}
+
+button:disabled,
+.disabled-btn {
+    background: #cccccc; /* Gray background */
+    color: #666666; /* Dark gray text */
+    cursor: not-allowed;
+    opacity: 0.6;
+    box-shadow: none;
+    transform: none;
 }
 
 /* Footer */
@@ -144,7 +179,7 @@ footer {
     color: white;
 }
 
-/* Responsive Design */
+/* Responsive design for mobile devices */
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
@@ -153,5 +188,23 @@ footer {
     nav {
         flex-direction: column;
         text-align: center;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px; /* Slightly rounder for better tap experience */
+        width: 100%; /* Makes it responsive */
+        max-width: 250px; /* Prevents buttons from being too wide on large screens */
+        transition: all 0.3s ease;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .buttons {
+        flex-direction: column; /* Make buttons stack on smaller screens */
+        align-items: center;
     }
 }
