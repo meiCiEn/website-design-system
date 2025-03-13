@@ -35,7 +35,7 @@ h2 {
 }
 
 /* Navigation Bar */
-nav {
+.nav-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,13 +44,13 @@ nav {
     color: white;
 }
 
-nav ul {
+.nav-main ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-nav ul li a {
+.nav-main ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -169,6 +169,91 @@ button:disabled,
     opacity: 0.6;
     box-shadow: none;
     transform: none;
+}
+
+/* Breadcrumb Menu */
+.breadcrumb {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.breadcrumb ul {
+    display: flex; /* To align <li>s in a row */
+    list-style: none;
+    padding: 0;
+    gap: 5px;
+}
+
+.breadcrumb li {
+    display: flex;
+    align-items: center; /* Centers the text vertically */
+}
+
+/* Add ">" separator between breadcrumb items */
+.breadcrumb li+li::before {
+    content: " > ";
+    padding: 0 10px;
+    color: gray; /* Style separator */
+  }
+
+.breadcrumb a {
+    color: var(--deep-teal);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: gray;
+    font-weight: bold;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    background: var(--deep-teal);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--soft-cream);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Footer */

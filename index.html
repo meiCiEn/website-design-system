@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Design System</title>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Abril+Fatface&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <!-- Navigation Bar -->
-    <nav>
+    <nav class="nav-main">
         <h1>Ellie's Design System</h1>
         <ul>
             <li><a href="#colors">Colours</a></li>
@@ -98,12 +101,36 @@
 
         <!-- UI Elements Section -->
         <section id="ui-elements">
-            <h2>Buttons & UI Elements</h2>
+            <h2>Buttons</h2>
             <div class="buttons">
                 <button class="primary-btn">Primary Button</button>
                 <button class="secondary-btn">Secondary Button</button>
                 <button class="outlined-btn">Outlined Button</button>
                 <button class="disabled-btn">Disabled Button</button>
+            </div>
+        </section>
+
+        <!-- Navigation Section -->
+        <section id="navigation">
+            <h2>Navigation</h2>
+
+            <!-- Breadcrumb Menu -->
+            <nav class="breadcrumb">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Category</a></li>
+                    <li><span>Current Page</span></li>
+                </ul>
+            </nav>
+
+            <!-- Dropdown Menu -->
+            <div class="dropdown">
+                <button class="dropdown-btn">Dropdown Menu</button>
+                <ul class="dropdown-content">
+                    <li><a href="#">Option 1</a></li>
+                    <li><a href="#">Option 2</a></li>
+                    <li><a href="#">Option 3</a></li>
+                </ul>
             </div>
         </section>
 
@@ -115,4 +142,5 @@
     </footer>
 
 </body>
+
 </html>
